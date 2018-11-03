@@ -1,24 +1,16 @@
-# README
+##[PowderKeg]
+### Pitch
+* PowderKeg finds the ski resort with the most ideal conditions for a great ski day!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Problem
+* Deciding which ski resort to go to is hard with factors to consider like epic snowfall, and if the wind & chill will be worth it.
 
-Things you may want to cover:
+### Solution
+* This app will display weather data (snowfall, wind, sunshine, etc.) specific to colorado ski resorts to help skiers and snowboarders plan their trip to the mountain. It's also going to feature awesome pics of skiers & snowboarders to get users in the zone.
 
-* Ruby version
+### Target Audience
+* This app would be applicable to skiers, snowboarders, & powder chasers.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Integrations
+* API ideas: weather unlocked, onthesnow, google photos api, dark sky api, foreca api
+* OAuth integration: Google.
