@@ -6,9 +6,7 @@ describe 'GET /api/v1/snowcast?location=name' do
 
     get "/api/v1/snowcast?location=#{resort.name}"
 
+    snowcast = JSON.parse(response.body)
     expect(response).to be_successful
-    
-
-
   end
 end
