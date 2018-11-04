@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_03_213558) do
+ActiveRecord::Schema.define(version: 2018_11_04_002203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,4 +25,27 @@ ActiveRecord::Schema.define(version: 2018_11_03_213558) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "snowcasts", force: :cascade do |t|
+    t.float "apparent_temp"
+    t.float "apparent_temp_max"
+    t.datetime "apparent_temp_max_time"
+    t.float "cloud_cover"
+    t.float "precip_accumulation"
+    t.float "precip_intensity_max"
+    t.datetime "precip_intensity_max_time"
+    t.float "precip_probability"
+    t.string "precip_type"
+    t.float "visibility"
+    t.float "temp_max"
+    t.datetime "temp_max_time"
+    t.float "wind_gust"
+    t.datetime "wind_gust_time"
+    t.float "wind_speed"
+    t.bigint "resort_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["resort_id"], name: "index_snowcasts_on_resort_id"
+  end
+
+  add_foreign_key "snowcasts", "resorts"
 end
