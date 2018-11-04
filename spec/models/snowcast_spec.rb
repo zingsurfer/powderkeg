@@ -1,7 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe Snowcast, type: :model do
-  describe 'relationships' do
-    it {should belong_to(:resort)}
+RSpec.describe Snowcast do
+  data = {"currently" => {"apparentTemperature" => 70}}
+  subject { Snowcast.new(data) }
+  describe 'it exists' do
+    it {is_expected.to be_a Snowcast}
   end
 end
