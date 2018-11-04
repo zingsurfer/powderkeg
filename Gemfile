@@ -13,6 +13,7 @@ gem 'puma', '~> 3.11'
 gem 'webpacker'
 gem 'figaro'
 gem 'faraday'
+gem 'fast_jsonapi'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'

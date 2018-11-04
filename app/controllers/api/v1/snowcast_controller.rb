@@ -10,7 +10,9 @@ class Api::V1::SnowcastController < ApplicationController
     response = conn.get("/premium/v1/ski.ashx")
 
     snowcast_data = JSON.parse(response.body)
-    snowcast = Snowcast.new(snowcast_data)
+    snowcast = Api::V1::Snowcast.new(snowcast_data)
+
+    snowcast_json = Api::V1::SnowcastSerializer.new(snowcast).serialized_json
     render json: snowcast
   end
 
