@@ -7,6 +7,8 @@ class SnowcastFacade
     Snowcast.new(retrieve_data)
   end
 
+  private
+  
   def retrieve_data
     Api::V1::DarkSkyService.new(@resort.latitude, @resort.longitude).data
   end
