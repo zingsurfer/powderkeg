@@ -6,5 +6,6 @@ RSpec.describe Resort, type: :model do
   end
 
   describe 'relationships' do
+    it {should have_many(:snowcasts)}
   end
 end
