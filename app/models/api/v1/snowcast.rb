@@ -22,7 +22,7 @@ class Api::V1::Snowcast
     @snow_accumulation = ds_data["daily"]["data"][0]["precipAccumulation"]
   end
 
-  def top
+  def peak
     { max_temp: @top_max_temp }
   end
 
@@ -30,7 +30,7 @@ class Api::V1::Snowcast
     { max_temp: @mid_max_temp }
   end
 
-  def bot
+  def base
     { max_temp: @bot_max_temp }
   end
 
