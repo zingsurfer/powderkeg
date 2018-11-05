@@ -16,6 +16,8 @@ gem 'faraday'
 gem 'fast_jsonapi'
 gem 'geocoder'
 gem 'bcrypt'
+# encode & decode JWT tokens for token-based authorization
+gem 'jwt'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
