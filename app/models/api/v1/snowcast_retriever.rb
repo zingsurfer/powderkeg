@@ -1,4 +1,4 @@
-class SnowcastRetriever
+class Api::V1::SnowcastRetriever
   def initialize(resort)
     @resort = resort
   end
