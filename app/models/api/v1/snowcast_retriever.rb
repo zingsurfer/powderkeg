@@ -9,9 +9,12 @@ class Api::V1::SnowcastRetriever
 
   private
   def snowcast
-    snowcast ||= Api::V1::Snowcast.new(snowcast_data, @resort)
+    snowcast ||= Api::V1::Snowcast.new(world_weather_data, dark_sky_data, @resort)
   end
-  def snowcast_data
-    snowcast_data ||= Api::V1::WorldWeatherService.new(@resort).snowcast_data
+  def world_weather_data
+    world_weather_data ||= Api::V1::WorldWeatherService.new(@resort).snowcast_data
+  end
+  def dark_sky_data
+    dark_sky_data ||= Api::V1::DarkSkyService.new(@resort.latitude, @resort.longitude).snowcast_data
   end
 end
