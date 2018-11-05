@@ -21,6 +21,7 @@ describe 'GET /api/v1/snowcast?location=name' do
     expect(snowcast["data"]["attributes"]["overall"]).to have_key("summary")
     expect(snowcast["data"]["attributes"]["overall"]).to have_key("wind_speed")
     expect(snowcast["data"]["attributes"]["overall"]).to have_key("visibility")
+    expect(snowcast["data"]["attributes"]["overall"]).to have_key("cloud_cover")
     expect(snowcast["data"]["attributes"]["overall"]["precip"]).to have_key("precip_probability")
     expect(snowcast["data"]["attributes"]["overall"]["precip"]).to have_key("precip_type")
     expect(snowcast["data"]["attributes"]["overall"]["precip"]).to have_key("snow_probability")

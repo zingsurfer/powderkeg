@@ -6,7 +6,7 @@ class Api::V1::Snowcast
   def initialize(ww_data = {}, ds_data = {}, resort)
     @resort_id = resort.id
     @resort_name = resort.name
-    
+
     @top_max_temp = ww_data[0]["top"][0]["maxtempF"].to_f
     @mid_max_temp = ww_data[0]["mid"][0]["maxtempF"].to_f
     @bot_max_temp = ww_data[0]["bottom"][0]["maxtempF"].to_f
@@ -14,6 +14,7 @@ class Api::V1::Snowcast
     @summary = ds_data["daily"]["summary"]
     @wind_speed = ds_data["daily"]["data"][0]["windSpeed"]
     @visibility = ds_data["daily"]["data"][0]["visibility"]
+    @cloud_cover = ds_data["daily"]["data"][0]["cloudCover"]
 
     @precip_probability = ds_data["daily"]["data"][0]["precipProbability"]
     @precip_type = ds_data["daily"]["data"][0]["precipType"]
@@ -37,6 +38,7 @@ class Api::V1::Snowcast
     { summary: @summary,
       wind_speed: @wind_speed,
       visibility: @visibility,
+      cloud_cover: @cloud_cover,
       precip: { precip_probability: @precip_probability,
                 precip_type: @precip_type,
                 snow_probability: @snow_probability,
