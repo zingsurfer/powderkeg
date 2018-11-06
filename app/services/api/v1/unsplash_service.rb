@@ -1,6 +1,6 @@
 class Api::V1::UnsplashService
   def random_photo_data
-    JSON.parse(response('/photos/random'))
+    JSON.parse(response('/photos/random').body)[0]
   end
 
   private
