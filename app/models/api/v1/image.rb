@@ -17,7 +17,7 @@ class Api::V1::Image
   end
 
   def unsplash_link
-    "https://unsplash.com/?utm_source=powdercast&utm_medium=referall"
+    "https://unsplash.com/?utm_source=powdercast&utm_medium=referral"
   end
 
   def sizes
