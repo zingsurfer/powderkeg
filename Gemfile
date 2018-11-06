@@ -15,6 +15,9 @@ gem 'figaro'
 gem 'faraday'
 gem 'fast_jsonapi'
 gem 'geocoder'
+gem 'bcrypt'
+gem 'jwt' # encode & decode JWT tokens for token-based authorization
+gem 'simple_command' # for user authentication, instead of using private controller methods
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'

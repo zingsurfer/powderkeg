@@ -3,8 +3,8 @@ class Api::V1::SnowcastSerializer
   set_type :snowcast
   attributes :resort_name,
              :overall,
-             :top,
+             :peak,
              :mid,
-             :bot
+             :base
   belongs_to :resort
 end
