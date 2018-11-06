@@ -1,6 +1,7 @@
 class Api::V1::Image
   attr_reader :id
   def initialize(unsplash_data)
+    @id = 176
     @thumb_size = unsplash_data["urls"]["thumb"]
     @small_size = unsplash_data["urls"]["small"]
     @regular_size = unsplash_data["urls"]["regular"]

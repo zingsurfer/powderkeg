@@ -4,6 +4,7 @@ class Api::V1::Snowcast
               :resort_name
 
   def initialize(ww_data = {}, ds_data = {}, resort)
+    @id = 512
     @resort_id = resort.id
     @resort_name = resort.name
 
