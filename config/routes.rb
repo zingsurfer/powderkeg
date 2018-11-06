@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get '/images', to: 'images#show'
       get '/snowcast', to: 'snowcast#show'
       resources :users, only: [:create]
+      resources :sessions, only: [:create]
     end
   end
 end
