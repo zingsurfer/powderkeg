@@ -21,5 +21,9 @@ describe 'GET /api/v1/images?query=search_params' do
     expect(image["data"]["attributes"]).to have_key("links")
     expect(image["data"]["attributes"]["links"]).to have_key("artist_referral_link")
     expect(image["data"]["attributes"]["links"]).to have_key("unsplash_link")
+    expect(response.header).to have_key("Accept")
+    expect(response.header).to have_key("Content-Type")
+    expect(response.header["Accept"]).to eq("application/json")
+    expect(response.header["Content-Type"]).to eq("application/json")
   end
 end
