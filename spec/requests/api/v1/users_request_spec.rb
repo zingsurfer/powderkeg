@@ -9,6 +9,7 @@ describe 'POST /api/v1/users' do
     user_api_key = JSON.parse(response.body)
     expect(response).to be_successful
     expect(user.email).to eq(user_params[:email])
+    expect(response).to have_http_status(201)
     expect(user_api_key).to have_key("api_key")
     expect(response.header).to have_key("Accept")
     expect(response.header).to have_key("Content-Type")
@@ -16,20 +17,3 @@ describe 'POST /api/v1/users' do
     expect(response.header["Content-Type"]).to eq("application/json")
   end
 end
-# POST /api/v1/users
-# Content-Type: application/json
-# Accept: application/json
-#
-# {
-#   "email": "whatever@example.com",
-#   "password": "password"
-#   "password_confirmation": "password"
-# }
-# Response:
-#
-# status: 201
-# body:
-#
-# {
-#   "api_key": "jgn983hy48thw9begh98h4539h4",
-# }
