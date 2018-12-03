@@ -25,6 +25,7 @@ Accept: application/json
 ```
 
 Response:
+![](https://user-images.githubusercontent.com/36902512/48084951-3daf5b80-e1b6-11e8-9513-93b1f58e96ea.png)
 
 ## Weather data based on resort name
 ### GET **/api/v1/snowcast?location=#{resort.name}**
@@ -36,6 +37,7 @@ Accept: application/json
 ```
 
 Response:
+![](https://user-images.githubusercontent.com/36902512/48085466-93d0ce80-e1b7-11e8-9155-9dcfa59e4728.png)
 
 ## Register
 ### POST **/api/v1/users**
