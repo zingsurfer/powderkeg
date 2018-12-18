@@ -8,4 +8,6 @@ class ApplicationController < ActionController::API
     response.set_header("Accept", "application/json")
     response.set_header("Content-Type", "application/json")
   end
+
+
 end
