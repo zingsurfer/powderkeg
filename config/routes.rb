@@ -8,4 +8,5 @@ Rails.application.routes.draw do
       resources :sessions, only: [:create]
     end
   end
+  get '*other', to: redirect('/')
 end

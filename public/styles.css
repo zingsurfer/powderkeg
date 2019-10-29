@@ -1,0 +1,41 @@
+body {
+  background: #005563;
+  text-align: center;
+  font-family: 'Josefin Sans';
+  color: #49EAF8;
+  margin: 0 10%;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 1%;
+  padding: 1%;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+a:link, a:visited {
+  color: #ECFCFE;
+}
+
+a:active, a:hover {
+  color: #E5EEEF;
+}
+
+.logo {
+  color: white;
+  font-size: 45px;
+  font-family: 'Marck Script';
+  padding: 2% 2%;
+}
